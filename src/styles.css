@@ -1,0 +1,102 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5fcff;
+  color: #152238;
+}
+
+h1,
+#info {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+h4 {
+  margin: 8px;
+}
+
+button,
+input[type="submit"] {
+  font-family: "Roboto", sans-serif;
+  color: #f5fcff;
+  background-color: #85b0c1;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 10px 6px 10px;
+}
+
+input[type="text"],
+select {
+  font-family: "Roboto", sans-serif;
+  color: #152238;
+  background-color: #f5fcff;
+  border: 1px solid #85b0c1;
+  border-radius: 16px;
+  padding: 4px 8px 4px 8px;
+}
+
+#map {
+  height: 70vh;
+  margin-bottom: 8px;
+}
+
+.center {
+  margin: auto;
+  width: 95%;
+}
+
+.square {
+  height: 12px;
+  width: 12px;
+  margin-right: 4px;
+  margin-left: 4px;
+  background-color: #f5fcff;
+}
+
+#map-legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 8px;
+}
+
+.column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.columnShrink {
+  flex-grow: 0;
+  flex-shrink: 1;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.row {
+  display: flex;
+}
+
+@media screen and (max-width: 850px) {
+  .row {
+    display: block;
+  }
+  #chart {
+    width: 100%;
+  }
+  .center {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+#chart-opt {
+  display: flex;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Statistic portal</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="src/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+    crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="center">
+      <h1>
+        Finland's 2017 Municipal elections Statistic portal
+      </h1>
+      <p id="info">
+        Welcome to the 2017 municipal election statistic 
+        portal! In the chart below you can see how the votes
+        divided between each party in different areas. You can 
+        also browse the map for additional data. Use the search bar,
+        dropdown menu and tick boxes to explore more. You can download
+        the visualisation as an SVG file.
+      </p>
+      
+      <div class="row">
+        <div class="column">  
+          <h4 id="chart-title">Vote-% for each party in Manner-Suomi for this and thr previous election</h4>
+          <div id="chart"></div>
+          <div id="chart-opt">
+            <div class="column">
+              <p>Show</p>
+              <input type="checkbox" id="emp-box" name="emp-box" checked>
+              <label for="emp-box"> Unemployment rate</label>
+            </br>
+              <input type="checkbox" id="edu-box" name="edu-box" checked>
+              <label for="edu-box"> Academic degree rate</label>
+            </div>
+            <div class="columnShrink">
+              <button id=img>Download chart</button>
+            </div>
+          </div>
+          <form id="search">
+            <label for="search-city">Search city:</label>
+            <input type="text" placeholder="City" id="search-city"></input>
+            <input type="submit" value="Search"></input>
+            <label id="click-map">or click on map to select area</label>
+          </form>      
+        </div>
+        
+        <div class="column">
+          <h4>Elections by municipality</h4>
+          <div id="map"></div>
+          <div id="map-legend"></div>
+          <label for="dropdown">Data to show on map:</label>
+          <select id="dropdown">
+            <option value="Suurinpuolue">Party with the most votes</option>
+            <option value="Naistenprp">Dominant gender of councilors</option>
+            <option value="Apro">Voting percentage in municipality</option>
+          </select>
+        </div>
+      </div>
+    </div>
+      
+    
+  </body>
+</html>
